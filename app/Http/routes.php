@@ -13,13 +13,11 @@
 
 Route::get('/', function () {
 
-    $items = ['Scutums cadunt!', 'Cur itineris tramitem trabem?', 'Olla mirabilis fermium est.'];
-    \Log::debug($items);
+    // cli
+    // composer require barryvdh/laravel-debugbar
+    // php artisan vendor:publish
 
-    \Log::info('Heu, calcaria! Cum mineralis trabem, omnes lubaes examinare festus, flavum fluctuies.');
-    \Log::warning('Varius idoleum inciviliter manifestums nomen est.');
-    \Log::error('Mortem manducares, tanquam salvus extum.');
-    \Log::critical('Velox, peritus terrors solite talem de festus, fatalis verpa!');
+    \Debugbar::error('A falsis, axona talis caesium.');
 
-    //return view('welcome');
+    return view('welcome');
 });
