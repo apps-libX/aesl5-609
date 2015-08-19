@@ -9,5 +9,8 @@ use todos\Http\Controllers\Controller;
 
 class WelcomeController extends Controller
 {
-    //
+    function index()
+    {
+        return view('welcome');
+    }
 }

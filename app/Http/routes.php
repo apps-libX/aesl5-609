@@ -11,9 +11,5 @@
 |
 */
 
-// cli
-// php artisan make:controller --plain WelcomeController
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index');
