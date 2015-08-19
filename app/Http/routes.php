@@ -17,5 +17,5 @@ Route::get('/', function () {
     // vendor/bin/phpunit --version
     // vendor/bin/phpunit
 
-    return view('welcome');
+    // return view('welcome');
 });
