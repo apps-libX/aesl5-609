@@ -16,5 +16,10 @@ Route::get('/', function () {
     $items = ['Scutums cadunt!', 'Cur itineris tramitem trabem?', 'Olla mirabilis fermium est.'];
     \Log::debug($items);
 
+    \Log::info('Heu, calcaria! Cum mineralis trabem, omnes lubaes examinare festus, flavum fluctuies.');
+    \Log::warning('Varius idoleum inciviliter manifestums nomen est.');
+    \Log::error('Mortem manducares, tanquam salvus extum.');
+    \Log::critical('Velox, peritus terrors solite talem de festus, fatalis verpa!');
+
     //return view('welcome');
 });
