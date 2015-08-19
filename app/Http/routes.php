@@ -14,10 +14,8 @@
 Route::get('/', function () {
 
     // cli
-    // composer require barryvdh/laravel-debugbar
-    // php artisan vendor:publish
-
-    \Debugbar::error('A falsis, axona talis caesium.');
+    // vendor/bin/phpunit --version
+    // vendor/bin/phpunit
 
     return view('welcome');
 });
