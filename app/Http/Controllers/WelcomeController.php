@@ -11,6 +11,6 @@ class WelcomeController extends Controller
 {
     function index()
     {
-        return view('welcome');
+        return view('welcome')->with('abaculus', 'Nunquam experientia exsul.');
     }
 }

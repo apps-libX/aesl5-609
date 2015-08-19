@@ -38,6 +38,8 @@
     <div class="container">
         <div class="content">
             <div class="title">Welcome</div>
+            {{-- Output the $abaculus variable. --}}
+            <p>{{ $abaculus }}</p>
         </div>
     </div>
 </body>
