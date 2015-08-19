@@ -11,6 +11,9 @@ class WelcomeController extends Controller
 {
     function index()
     {
-        return view('welcome')->with('luras', 'Fraticinida est domesticus tumultumque')->with('date', date('Y-m-d'));
+        $luras = 'Secundus, magnum demissios velox contactus de brevis, flavum adelphis.';
+        $date  = date('Y-m-d');
+
+        return view('welcome', compact('luras', 'date'));
     }
 }
