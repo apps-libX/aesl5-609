@@ -13,10 +13,8 @@
 
 Route::get('/', function () {
 
-    $items = [
-        'items' => ['Pack luggage', 'Go to airport', 'Arrive in San Juan']
-    ];
-    dd($items);
+    $items = ['Scutums cadunt!', 'Cur itineris tramitem trabem?', 'Olla mirabilis fermium est.'];
+    \Log::debug($items);
 
-    return view('welcome');
+    //return view('welcome');
 });
