@@ -11,6 +11,11 @@ class WelcomeController extends Controller
 {
     function index()
     {
-        return view('welcome')->withAbaculus('Nunquam experientia exsul.');
+        $data = [
+            'luras' => 'Frondators cantare',
+            'date'  => date('Y-m-d')
+        ];
+
+        return view('welcome')->with($data);
     }
 }
