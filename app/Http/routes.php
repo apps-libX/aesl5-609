@@ -12,10 +12,5 @@
 */
 
 Route::get('/', function () {
-
-    // cli
-    // vendor/bin/phpunit --version
-    // vendor/bin/phpunit
-
-    // return view('welcome');
+    return view('welcome');
 });
