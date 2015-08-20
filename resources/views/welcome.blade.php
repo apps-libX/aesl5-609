@@ -39,12 +39,14 @@
         <div class="content">
             <div class="title">Welcome, {{ $planeta or 'Ausus' }}</div>
 
-                @if (count($lists) > 0)
+                @if (count($lists) > 1)
                     @foreach ($lists as $list)
                         {{ $list }} <br />
                     @endforeach
+                @elseif (count($lists) == 1)
+                    <p>You have one list: {{ $lists[0] }}.</p>
                 @else
-                    You don't have any lists saved.
+                    <p>You don't have any lists saved.</p>
                 @endif
 
         </div>
