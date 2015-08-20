@@ -38,7 +38,13 @@
     <div class="container">
         <div class="content">
             <div class="title">Welcome, {{ $planeta or 'Ausus' }}</div>
-            Nunquam reperire sensorem {{ $luras }} on {{ $date }}.
+
+            <ul>
+                @foreach ($lists as $list)
+                    <li>{{ $list }}</li>
+                @endforeach
+            </ul>
+
         </div>
     </div>
 </body>
