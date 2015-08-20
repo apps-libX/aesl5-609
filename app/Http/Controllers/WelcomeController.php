@@ -11,14 +11,8 @@ class WelcomeController extends Controller
 {
     function index()
     {
-        $lists = [
-            'Orexiss ridetis',
-            'Quadras ridetis',
-            'Urias accelerare',
-            'Torus brevis adiurator est',
-            'Candidatuss sunt mortems de placidus eleates.'
-        ];
+        $data = [];
 
-        return view('welcome')->with('lists', $lists);
+        return view('welcome')->with('data', $data);
     }
 }
