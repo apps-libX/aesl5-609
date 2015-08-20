@@ -40,9 +40,11 @@
             <div class="title">Welcome, {{ $planeta or 'Ausus' }}</div>
 
             <ul>
-                @foreach ($lists as $list)
+                @forelse ($lists as $list)
                     <li>{{ $list }}</li>
-                @endforeach
+                @empty
+                    <li>You don't have any lists saved.</li>
+                @endforelse
             </ul>
 
         </div>
