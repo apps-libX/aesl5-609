@@ -39,13 +39,13 @@
         <div class="content">
             <div class="title">Welcome, {{ $planeta or 'Ausus' }}</div>
 
-            <ul>
-                @forelse ($lists as $list)
-                    <li>{{ $list }}</li>
-                @empty
-                    <li>You don't have any lists saved.</li>
-                @endforelse
-            </ul>
+                @if (count($lists) > 0)
+                    @foreach ($lists as $list)
+                        {{ $list }} <br />
+                    @endforeach
+                @else
+                    You don't have any lists saved.
+                @endif
 
         </div>
     </div>

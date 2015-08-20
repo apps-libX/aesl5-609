@@ -11,7 +11,7 @@ class WelcomeController extends Controller
 {
     function index()
     {
-        $lists = [];
+        $lists = ['Orexiss ridetis', 'Quadras ridetis', 'Urias accelerare', 'Torus brevis adiurator est'];
 
         return view('welcome')->with('lists', $lists);
     }
