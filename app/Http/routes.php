@@ -14,4 +14,7 @@
 // Generate models using Artisan
 // php artisan make:model Todolist
 
+// Create migration
+// php artisan make:migration create_todolists_table --create=todolists
+
 Route::get('/', 'WelcomeController@index');
