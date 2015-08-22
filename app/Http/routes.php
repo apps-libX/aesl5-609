@@ -17,4 +17,7 @@
 // Create migration
 // php artisan make:migration create_todolists_table --create=todolists
 
+// Run migration
+// php artisan migrate
+
 Route::get('/', 'WelcomeController@index');
