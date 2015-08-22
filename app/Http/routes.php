@@ -11,5 +11,7 @@
 |
 */
 
+// Generate models using Artisan
+// php artisan make:model Todolist
 
 Route::get('/', 'WelcomeController@index');
