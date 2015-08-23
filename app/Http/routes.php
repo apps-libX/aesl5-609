@@ -20,4 +20,7 @@
 // Run migration
 // php artisan migrate
 
+// Rollback change
+// php artisan migrate:rollback
+
 Route::get('/', 'WelcomeController@index');
