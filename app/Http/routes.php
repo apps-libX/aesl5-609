@@ -15,3 +15,5 @@
 // php artisan make:controller ListsController
 
 Route::get('/', 'WelcomeController@index');
+
+Route::resource('lists', 'ListsController');
