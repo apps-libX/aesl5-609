@@ -11,8 +11,11 @@
 |
 */
 
-// Generate REST-enabled controller using Artisan
-// php artisan make:controller ListsController
+// Rebuild the classmap
+// composer dump-autoload
+
+// Seed a database
+// php artisan db:seed
 
 Route::get('/', 'WelcomeController@index');
 
