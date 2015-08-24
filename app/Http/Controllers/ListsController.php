@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use todos\Http\Requests;
 use todos\Http\Controllers\Controller;
 
+use todos\Todolist;
+
 class ListsController extends Controller
 {
     /**
@@ -16,7 +18,8 @@ class ListsController extends Controller
      */
     public function index()
     {
-        return view('lists.index');
+        $lists = Todolist::all();
+        return view('lists.index')->with('lists', $lists);
     }
 
     /**
