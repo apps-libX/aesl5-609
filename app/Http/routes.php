@@ -11,19 +11,7 @@
 |
 */
 
-// Generate models using Artisan
-// php artisan make:model Todolist
-
-// Create migration
-// php artisan make:migration create_todolists_table --create=todolists
-
-// Run migration
-// php artisan migrate
-
-// Rollback change
-// php artisan migrate:rollback
-
-// Checking migration status
-// php artisan migrate:status
+// Generate REST-enabled controller using Artisan
+// php artisan make:controller ListsController
 
 Route::get('/', 'WelcomeController@index');
