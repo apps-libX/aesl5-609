@@ -11,17 +11,15 @@ class TodolistTableSeeder extends Seeder
 {
     public function run()
     {
-        Todolist::create([
-            'name'        => 'Nunquam promissio vortex?',
-            'description' => 'Audax, flavum nixs mechanice examinare de barbatus, nobilis barcas!'
-        ]);
-        Todolist::create([
-            'name'        => 'Aususs congregabo',
-            'description' => 'Nunquam anhelare tumultumque.'
-        ]);
-        Todolist::create([
-            'name'        => 'Rationes assimilant!',
-            'description' => 'Apolloniatess sunt xiphiass de ferox habitio. '
-        ]);
+        $faker = \Faker\Factory::create();
+
+        Todolist::truncate();
+
+        foreach (range(1, 50) as $index) {
+            Todolist::create([
+                'name'        => $faker->sentence(2),
+                'description' => $faker->sentence(4),
+            ]);
+        }
     }
 }

@@ -11,10 +11,10 @@
 |
 */
 
-// Rebuild the classmap
+// Faker - Rebuild the classmap
 // composer dump-autoload
 
-// Seed a database
+// Faker - Seed a database
 // php artisan db:seed
 
 Route::get('/', 'WelcomeController@index');
