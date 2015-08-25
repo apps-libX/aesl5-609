@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome est flavum contencio berolinum .</title>
+    <title>Welcome</title>
 </head>
 <body>
 
@@ -10,5 +10,6 @@
 
 </body>
 </html>
+
 
 {{--Created by anonymoussc on 8/21/15 4:25 AM--}}
