@@ -11,11 +11,14 @@
 |
 */
 
-// Faker - Rebuild the classmap
-// composer dump-autoload
+// creating a new migration that adds a column named deleted_at to the todolists table
+// php artisan make:migration add_soft_delete_to_todolists --table=todolists
 
-// Faker - Seed a database
-// php artisan db:seed
+// Run migration
+// php artisan migrate
+
+// include soft deleted records in your results
+// $lists = Todolist::withTrashed()->get();
 
 Route::get('/', 'WelcomeController@index');
 
