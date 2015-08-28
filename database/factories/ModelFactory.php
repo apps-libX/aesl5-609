@@ -19,3 +19,10 @@ $factory->define(todos\User::class, function ($faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(todos\Todolist::class, function ($faker) {
+    return [
+        'name' => 'cirpi',
+        'description' => $faker->name
+    ];
+});
