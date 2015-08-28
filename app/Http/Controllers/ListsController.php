@@ -49,9 +49,9 @@ class ListsController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $list = Todolist::findOrFail($id);
+        $list = Todolist::findBySlug($slug);
         return view('lists.show')->with('list', $list);
     }
 
