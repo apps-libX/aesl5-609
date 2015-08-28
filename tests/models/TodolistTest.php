@@ -17,4 +17,11 @@ class TodolistTest extends TestCase
         $list = new Todolist;
         $this->assertEquals(get_class($list), 'todos\Todolist');
     }
+
+    public function testTodolistRecordCount()
+    {
+        $listFactory = factory('todos\Todolist')->create();
+        $lists = Todolist::all();
+        $this->assertEquals($lists->count(), 1);
+    }
 }
