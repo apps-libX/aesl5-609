@@ -143,7 +143,8 @@ return [
         todos\Providers\AppServiceProvider::class,
         todos\Providers\EventServiceProvider::class,
         todos\Providers\RouteServiceProvider::class,
-        'Barryvdh\Debugbar\ServiceProvider'
+        'Barryvdh\Debugbar\ServiceProvider',
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 
     ],
 

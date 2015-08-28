@@ -11,14 +11,11 @@
 |
 */
 
-// creating a new migration that adds a column named deleted_at to the todolists table
-// php artisan make:migration add_soft_delete_to_todolists --table=todolists
+// Adding the eloquent-sluggable package
+// composer require cviebrock/eloquent-sluggable
 
-// Run migration
-// php artisan migrate
-
-// include soft deleted records in your results
-// $lists = Todolist::withTrashed()->get();
+// Publish the package’s configuration file
+// php artisan vendor:publish
 
 Route::get('/', 'WelcomeController@index');
 
