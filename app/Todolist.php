@@ -17,4 +17,9 @@ class Todolist extends Model implements SluggableInterface
         'build_from' => 'name',
         'save_to'    => 'slug',
     ];
+
+    public function tasks()
+    {
+        return $this->hasMany('todos\Task');
+    }
 }

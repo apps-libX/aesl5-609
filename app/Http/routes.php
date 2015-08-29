@@ -12,10 +12,10 @@
 */
 
 // Generate model
-// php artisan make:model Profile
+// php artisan make:model Task
 
-// Generate migration class which create profiles table
-// php artisan make:migration create_profiles_table --create=profiles
+// Generate migration
+// php artisan make:migration create_tasks_table --create=tasks
 
 // Run migration
 // php artisan migrate
