@@ -11,8 +11,14 @@
 |
 */
 
-// Confirm we can instantiate the Todolist class
-// vendor/bin/phpunit tests/models/TodolistTest.php
+// Generate model
+// php artisan make:model Profile
+
+// Generate migration class which create profiles table
+// php artisan make:migration create_profiles_table --create=profiles
+
+// Run migration
+// php artisan migrate
 
 Route::get('/', 'WelcomeController@index');
 
