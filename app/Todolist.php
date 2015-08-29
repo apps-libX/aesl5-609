@@ -22,4 +22,9 @@ class Todolist extends Model implements SluggableInterface
     {
         return $this->hasMany('todos\Task');
     }
+
+    public function categories()
+    {
+        return $this->belongsToMany('todos\Category')->withTimestamps();
+    }
 }

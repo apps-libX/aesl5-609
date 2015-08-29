@@ -12,10 +12,11 @@
 */
 
 // Generate model
-// php artisan make:model Task
+// php artisan make:model Category
 
 // Generate migration
-// php artisan make:migration create_tasks_table --create=tasks
+// php artisan make:migration create_categories_table --create=categories
+// php artisan make:migration create_category_todolist_table --create=category_todolist
 
 // Run migration
 // php artisan migrate
