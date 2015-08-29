@@ -17,6 +17,7 @@
 // Generate migration
 // php artisan make:migration create_categories_table --create=categories
 // php artisan make:migration create_category_todolist_table --create=category_todolist
+// php artisan make:migration add_description_to_category_todolist_table
 
 // Run migration
 // php artisan migrate
