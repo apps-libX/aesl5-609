@@ -27,4 +27,9 @@ class Todolist extends Model implements SluggableInterface
     {
         return $this->belongsToMany('todos\Category')->withTimestamps();
     }
+
+    public function comments()
+    {
+        return $this->morphMany('\todos\Comment', 'commentable');
+    }
 }

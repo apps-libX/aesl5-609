@@ -12,12 +12,10 @@
 */
 
 // Generate model
-// php artisan make:model Category
+// php artisan make:model Comment
 
 // Generate migration
-// php artisan make:migration create_categories_table --create=categories
-// php artisan make:migration create_category_todolist_table --create=category_todolist
-// php artisan make:migration add_description_to_category_todolist_table
+// php artisan make:migration create_comments_table --create=comments
 
 // Run migration
 // php artisan migrate
