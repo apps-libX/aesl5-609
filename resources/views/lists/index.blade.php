@@ -7,7 +7,7 @@
     @if ($lists->count() > 0)
         <ul>
             @foreach ($lists as $list)
-                <li><a href="/lists/{{$list->slug}}"> {{ $list->name }} </a></li>
+                <li><a href="/lists/{{$list->id}}"> {{ $list->name }} </a></li>
             @endforeach
         </ul>
     @else

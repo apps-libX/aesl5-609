@@ -22,7 +22,8 @@
     @else
         <p>
             You haven't created any tasks.
-            <a href="{{ URL::route('lists.tasks.create', [$list->id]) }}" class='btn btn-primary'>Create a task</a>
+            {{--<a href="{{ URL::route('lists.tasks.create', [$list->id]) }}" class='btn btn-primary'>Create a task</a>--}}
+            <a href="" class='btn btn-primary'>Create a task</a>
         </p>
     @endif
 @endsection
