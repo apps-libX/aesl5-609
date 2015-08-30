@@ -11,15 +11,15 @@
 |
 */
 
-// Generate model
-// php artisan make:model Comment
+// Generate plain controller
+// php artisan make:controller AboutController --plain
 
-// Generate migration
-// php artisan make:migration create_comments_table --create=comments
-
-// Run migration
-// php artisan migrate
+// Generate form request
+// php artisan make:request ContactFormRequest
 
 Route::get('/', 'WelcomeController@index');
 
 Route::resource('lists', 'ListsController');
+
+Route::get('contact', ['as' => 'contact', 'uses' => 'AboutController@create']);
+Route::post('contact', ['as' => 'contact_store', 'uses' => 'AboutController@store']);
