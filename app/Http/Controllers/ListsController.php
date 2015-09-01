@@ -29,7 +29,7 @@ class ListsController extends Controller
      */
     public function create()
     {
-        //
+        return view('lists.create');
     }
 
     /**
