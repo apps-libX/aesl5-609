@@ -17,8 +17,6 @@ class AboutController extends Controller
 
     public function store(ContactFormRequest $request)
     {
-        $name = $request->get('name');
-        $email = $request->get('email');
 
         \Mail::send('emails.contact',
             [
