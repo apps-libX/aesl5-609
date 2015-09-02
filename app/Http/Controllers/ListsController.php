@@ -75,7 +75,9 @@ class ListsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $list = Todolist::find($id);
+
+        return view('lists.edit')->with('list', $list);
     }
 
     /**
@@ -86,9 +88,16 @@ class ListsController extends Controller
      *
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(ListFormRequest $request, $id)
     {
-        //
+        $list = Todolist::find($id);
+
+        $list->update([
+            'name'        => $request->get('name'),
+            'description' => $request->get('description')
+        ]);
+
+        return \Redirect::route('lists.edit', [$list->id])->with('message', 'Your list has been updated!');
     }
 
     /**
