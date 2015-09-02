@@ -12,6 +12,7 @@ class Todolist extends Model implements SluggableInterface
     use SoftDeletes;
     use SluggableTrait;
 
+    protected $fillable = ['name', 'description'];
     protected $dates = ['deleted_at'];
     protected $sluggable = [
         'build_from' => 'name',

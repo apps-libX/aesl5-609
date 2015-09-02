@@ -8,6 +8,7 @@ use todos\Http\Requests;
 use todos\Http\Controllers\Controller;
 
 use todos\Todolist;
+use todos\Http\Requests\ListFormRequest;
 
 class ListsController extends Controller
 {
@@ -19,6 +20,7 @@ class ListsController extends Controller
     public function index()
     {
         $lists = Todolist::all();
+
         return view('lists.index')->with('lists', $lists);
     }
 
@@ -35,30 +37,40 @@ class ListsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param  Request $request
+     *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(ListFormRequest $request)
     {
-        //
+        $list = new Todolist([
+            'name'        => $request->get('name'),
+            'description' => $request->get('description')
+        ]);
+        $list->save();
+
+        return \Redirect::route('lists.create')->with('message', 'Your list has been created!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
+     *
      * @return Response
      */
     public function show($id)
     {
         $list = Todolist::find($id);
+
         return view('lists.show')->with('list', $list);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
+     *
      * @return Response
      */
     public function edit($id)
@@ -69,8 +81,9 @@ class ListsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  int  $id
+     * @param  Request $request
+     * @param  int     $id
+     *
      * @return Response
      */
     public function update(Request $request, $id)
@@ -81,12 +94,14 @@ class ListsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
+     *
      * @return Response
      */
     public function destroy($id)
     {
         Todolist::destroy($id);
+
         return \Redirect::route('lists.index');
     }
 }
