@@ -1,7 +1,7 @@
 <?php
 
-// Generate form request class
-// php artisan make:request ListFormRequest
+// Generate middleware
+// php artisan make:middleware RequestLogger
 
 Route::get('/', 'WelcomeController@index');
 

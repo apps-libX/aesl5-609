@@ -9,6 +9,11 @@ use todos\Http\Controllers\Controller;
 
 class WelcomeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('iplogger');
+    }
+
     function index()
     {
         $data = [];
