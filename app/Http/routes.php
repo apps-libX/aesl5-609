@@ -1,6 +1,10 @@
 <?php
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', ['as' => 'home', 'uses' => 'WelcomeController@index']);
+
+// Route::get('/', 'WelcomeController@index');
+
+Route::get('about', 'AboutController@index');
 
 Route::resource('lists', 'ListsController');
 

@@ -10,6 +10,11 @@ use todos\Http\Requests\ContactFormRequest;
 
 class AboutController extends Controller
 {
+    public function index()
+    {
+        return view('about.index');
+    }
+
     public function create()
     {
         return view('about.contact');
