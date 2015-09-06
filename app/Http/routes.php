@@ -8,8 +8,11 @@ Route::get('contact', ['as' => 'contact', 'uses' => 'AboutController@create']);
 Route::post('contact', ['as' => 'contact_store', 'uses' => 'AboutController@store']);
 
 // Register
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
+// Route::get('auth/register', 'Auth\AuthController@getRegister');
+// Route::post('auth/register', 'Auth\AuthController@postRegister');
+get('/signup', ['as' => 'signup', 'uses' => 'Auth\AuthController@getRegister']);
+post('/signup', ['as' => 'signup', 'uses' => 'Auth\AuthController@postRegister']);
+
 
 // Sign-in
 Route::get('auth/login', 'Auth\AuthController@getLogin');
