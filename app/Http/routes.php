@@ -17,3 +17,9 @@ Route::post('auth/login', 'Auth\AuthController@postLogin');
 
 // Sign-out
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Password recovery
+Route::get('password/email', 'PasswordController@getEmail');
+Route::post('password/email', 'PasswordController@postEmail');
+Route::get('password/reset/{token}', 'PasswordController@getReset');
+Route::post('password/reset', 'PasswordController@postReset');
